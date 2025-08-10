@@ -1,0 +1,61 @@
+# Company profile for NIS2-Ready toolkit (microbusiness)
+# Fill the minimal fields: org.*, roles.*, bcdr.rto_hours, bcdr.rpo_hours, contacts.security_email
+
+meta:
+  profile_version: "1.0"
+  last_updated: "YYYY-MM-DD"     # e.g., 2025-08-11
+
+org:
+  name: "ACME Ltd"               # REQUIRED
+  sector: "Digital agency / WordPress"
+  headcount: 8
+  locations: ["Italy"]           # Country list
+  critical_services:             # What customers depend on
+    - "Client website hosting"
+    - "WordPress maintenance"
+    - "Customer support"
+
+roles:
+  security_owner: "Owner/CEO"    # Single accountable person
+  incident_manager: "Project Manager"
+  it_admin: "External IT provider"
+  dpo: null                      # Set if appointed, else null
+
+assets:
+  repositories: ["GitHub", "Google Drive"]
+  systems: ["cPanel hosting", "WordPress", "Email"]
+  critical_data: ["Client websites", "Databases", "Backups"]
+
+vendors:
+  critical:
+    - name: "Hosting Provider"   # Replace with actual provider name
+      service: "Web hosting"
+      sla_hours: 4
+    - name: "Domain Registrar"
+      service: "DNS/Domains"
+      sla_hours: 24
+    - name: "Backup Provider"
+      service: "Offsite backups"
+      sla_hours: 24
+
+risk:
+  appetite: "low"                # low | medium | high
+  rating_scale: ["low", "medium", "high", "critical"]
+
+bcdr:
+  rto_hours: 24                  # Max acceptable downtime for critical services
+  rpo_hours: 12                  # Max acceptable data loss window
+  backup_frequency_hours: 24     # How often backups run
+  maximum_tolerable_downtime_hours: 48
+
+contacts:
+  incident_hotline: "+00 000 000 000"
+  security_email: "security@example.com"   # REQUIRED
+  it_support_email: "support@example.com"
+
+language: "en"
+timezone: "Europe/Rome"          # Adjust as needed
+
+compliance:
+  jurisdictions: ["EU"]
+  notes: "NIS2 readiness starter; not legal advice."

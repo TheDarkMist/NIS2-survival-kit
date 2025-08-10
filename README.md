@@ -44,9 +44,26 @@ When assisting a user with this repository:
 4. When creating or updating documents:
    - Use Markdown format.
    - Keep filenames and folder structure unchanged.
-   - Maintain the document in the user’s preferred language (default: English).
+   - Maintain the document in the user's preferred language (default: English).
 5. When a document changes, **propose an updated `/00_context/index.md`** snippet ready to paste.
-6. Always clearly mark when a document is **draft**, **in review**, or **complete**.
+6. Always clearly mark when a document is **draft**, **in review**, **completed**, or **retired**.
+7. **For initial document creation**, use `docs/_prompts/en/Bootstrap.md` to generate the minimal required document set.
+
+## Quick Start
+
+### For New Users
+1. **Start with Bootstrap**: Use `docs/_prompts/en/Bootstrap.md` to create your initial NIS2 document set
+2. **Review generated documents**: Check the created policies and procedures in their respective folders
+3. **Customize content**: Update company-specific information and adjust to your business needs
+4. **Update the index**: Use `prompt_update_index.md` to register all new documents
+
+### For Existing Users
+1. Open `/00_context/index.md` to see what is done, what is in progress, and what is missing.
+2. Open the relevant `/docs/{area}/` folder and review or edit the documents.
+3. Use the prompts inside each folder to:
+   - Create a missing document.
+   - Update an existing one.
+4. When you change or create a document, **update `/00_context/index.md`** manually or with the help of AI using `prompt_update_index.md`.
 
 ## Design Principles
 

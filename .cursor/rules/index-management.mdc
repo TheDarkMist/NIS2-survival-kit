@@ -1,0 +1,36 @@
+---
+description: Rules for safely managing the master index file
+globs: ["00_context/index.md"]
+alwaysApply: false
+---
+
+# Index Management Rules
+
+## Critical Index Rules
+
+When working with `/00_context/index.md`:
+
+### Absolutely Forbidden
+- **NEVER** alter the table header structure
+- **NEVER** change existing Doc IDs 
+- **NEVER** delete existing rows (mark as "Retired" instead)
+
+### Required Actions
+- Only append new rows or update existing content
+- Maintain ALL columns exactly as specified
+- Use precise status values: Draft, In review, Completed, or Retired
+- Follow ISO date format: YYYY-MM-DD
+- Use proper Doc ID format: `NIS2-<ENISA#>-<TYPE>-<slug>`
+
+### Before Making Changes
+1. Read the current index completely
+2. Use `/00_context/prompt_update_index.md` for guidance
+3. Double-check all conventions are followed
+
+### After Making Changes
+- Verify table structure is intact
+- Confirm all required columns are populated
+- Check that dates use ISO format
+- Validate Doc IDs follow naming convention
+
+@00_context/prompt_update_index.md
