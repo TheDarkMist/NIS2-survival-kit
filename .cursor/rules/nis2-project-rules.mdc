@@ -49,6 +49,7 @@ Format: `NIS2-<ENISA#>-<TYPE>-<slug>`
 ## Index Management Rules
 
 ### When Working with `/00_context/index.md`
+- **ALWAYS** follow the detailed rules in `/00_context/prompt_update_index.md`
 - **NEVER** alter the table header structure
 - **NEVER** change existing Doc IDs
 - Only append new rows or update existing content
@@ -84,8 +85,9 @@ Format: `NIS2-<ENISA#>-<TYPE>-<slug>`
 
 ### Before Making Changes
 1. Read `/00_context/index.md` to understand current documentation state
-2. Consult relevant `/reference/` materials for official guidance
-3. Focus on the specific `/docs/{area}/` folder for the task
+2. **ALWAYS** consult `/00_context/prompt_update_index.md` for index update rules
+3. Consult relevant `/reference/` materials for official guidance
+4. Focus on the specific `/docs/{area}/` folder for the task
 
 ### When Creating/Updating Documents
 1. Use appropriate templates when available

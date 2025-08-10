@@ -18,6 +18,10 @@ outputs:
 notes: "Copy the fenced block below exactly as the prompt for your AI tool. Paths, IDs and ENISA mappings follow the NIS2 Survival Kit conventions."
 ---
 
+> IMPORTANT
+> - Prefer the modular flow: use `docs/_prompts/en/Create.md`, `docs/_prompts/en/Review.md`, and `docs/_prompts/en/Update.md` to work one file at a time.
+> - This bulk prompt generates multiple files and can be less reliable with long outputs. Use it only for very small initial sets or demos.
+
 ## Prompt to copy
 
 ~~~

@@ -2,6 +2,10 @@
 
 This prompt is meant for an AI assistant (or a careful human) to **append or update rows** in the **Master index** table inside `/00_context/index.md`, without breaking formatting, IDs, or conventions. Keep it minimal, deterministic, and auditable.
 
+> Usage note (modular flow recommended)
+> - After creating, reviewing, or updating a single document using `docs/_prompts/en/Create.md`, `Review.md`, or `Update.md`, use this prompt to add/update the corresponding row in `/00_context/index.md`.
+> - If you generate multiple files with `docs/_prompts/en/Bootstrap.md`, run this prompt afterwards to register each file in the index.
+
 ---
 
 ## Scope (what you may change)
@@ -165,5 +169,5 @@ Updated: NIS2-05-REG-supplier-register (to In review, version 0.2)
 * If both **Doc ID** and **File path** conflict with different rows, do not proceed; report a **conflict** and list the rows.
 * If **File path** does not exist in the repo yet, still add/update the row but keep **Status=Draft** and mention a warning in the output.
 * Never insert commas, extra pipes, HTML, or code blocks into the table cells.
-* Keep lines under \~300 characters; abbreviate **Risk covered** if needed.
+* Keep lines under ~300 characters; abbreviate **Risk covered** if needed.
 * Do not translate or rewrite titles arbitrarily; keep the user’s wording.

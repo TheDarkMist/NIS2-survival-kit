@@ -47,7 +47,11 @@ When assisting a user with this repository:
    - Maintain the document in the user's preferred language (default: English).
 5. When a document changes, **propose an updated `/00_context/index.md`** snippet ready to paste.
 6. Always clearly mark when a document is **draft**, **in review**, **completed**, or **retired**.
-7. **For initial document creation**, use `docs/_prompts/en/Bootstrap.md` to generate the minimal required document set.
+7. **Default: Modular flow (recommended)** — use prompts in `docs/_prompts/en/`:
+   - `Create.md`: create exactly one file (overwrite-safe)
+   - `Review.md`: quality check with optional minimal fix block
+   - `Update.md`: targeted edits with version/date discipline
+8. **Optional: Bootstrap** — `docs/_prompts/en/Bootstrap.md` generates multiple files at once; use for tiny initial sets or demos only.
 
 ## Quick Start
 
