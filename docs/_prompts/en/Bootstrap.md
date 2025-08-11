@@ -8,13 +8,13 @@ last_updated: "YYYY-MM-DD"
 inputs:
   - "00_context/company_profile.yaml"
 outputs:
-  - "docs/01_policy_network_and_systems/policy.en.md"
-  - "docs/02_risk_management/policy.en.md"
+  - "docs/01_policy_network_and_systems/security_policy.md"
+  - "docs/02_risk_management/risk_management_policy.md"
   - "docs/02_risk_management/risk_register.csv"
-  - "docs/03_incident_handling/policy.en.md"
-  - "docs/03_incident_handling/playbook.en.md"
-  - "docs/03_incident_handling/incident_report_form.en.md"
-  - "docs/04_business_continuity_and_crisis/bcp.en.md"
+  - "docs/03_incident_handling/incident_response_policy.md"
+  - "docs/03_incident_handling/incident_playbook.md"
+  - "docs/03_incident_handling/incident_report_form.md"
+  - "docs/04_business_continuity_and_crisis/business_continuity_plan.md"
 notes: "Copy the fenced block below exactly as the prompt for your AI tool. Paths, IDs and ENISA mappings follow the NIS2 Survival Kit conventions."
 ---
 
@@ -51,7 +51,7 @@ END FILE
 
 FILES TO GENERATE
 
-1) docs/01_policy_network_and_systems/policy.en.md
+1) docs/01_policy_network_and_systems/security_policy.md
 Front matter example:
 ---
 doc_id: "NIS2-01-POL-base"
@@ -71,7 +71,7 @@ Sections (in this order):
 - Required Evidence (what to keep as proof)
 - Review & Maintenance (frequency, owner)
 
-2) docs/02_risk_management/policy.en.md
+2) docs/02_risk_management/risk_management_policy.md
 Front matter:
 ---
 doc_id: "NIS2-02-POL-base"
@@ -97,7 +97,7 @@ CSV header ONLY (no extra text). Use commas. One sample empty row allowed.
 Columns:
 asset,threat,vulnerability,impact,likelihood,inherent_risk,controls,residual_risk,owner,due_date
 
-4) docs/03_incident_handling/policy.en.md
+4) docs/03_incident_handling/incident_response_policy.md
 Front matter:
 ---
 doc_id: "NIS2-03-POL-base"
@@ -118,7 +118,7 @@ Sections:
 - Evidence & Records
 - Review & Maintenance
 
-5) docs/03_incident_handling/playbook.en.md
+5) docs/03_incident_handling/incident_playbook.md
 Front matter:
 ---
 doc_id: "NIS2-03-PBK-base"
@@ -138,7 +138,7 @@ Structure:
 - KPIs & Timelines
 - Outputs/Evidence
 
-6) docs/03_incident_handling/incident_report_form.en.md
+6) docs/03_incident_handling/incident_report_form.md
 Front matter:
 ---
 doc_id: "NIS2-03-FORM-incident-report"
@@ -154,7 +154,7 @@ Provide a simple form (Markdown table) with fields:
 - Reporter, Date/Time, Affected service/asset, Severity, Impact, Summary,
 - Actions taken, Evidence links, Current status, Next steps, Owner
 
-7) docs/04_business_continuity_and_crisis/bcp.en.md
+7) docs/04_business_continuity_and_crisis/business_continuity_plan.md
 Front matter:
 ---
 doc_id: "NIS2-04-POL-bcp"

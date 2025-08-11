@@ -14,7 +14,7 @@ The structure is organized around the 13 security measures identified by ENISA.
 *   `docs/_prompts/en/Create.md`, `Review.md`, `Update.md`: Modular prompts to work one file at a time (default/recommended flow).
 *   `docs/_prompts/en/Bootstrap.md`: Optional bulk prompt to generate multiple files; use for very small initial sets or demos.
 *   `docs/`: This directory contains 13 subdirectories, one for each ENISA security measure. Each subdirectory is intended to hold policies, procedures, and other relevant documentation. Most of the files in this directory are currently empty placeholders.
-*   `reference/`: This directory contains official reference documents, such as the "NCSC NIS2 quick reference guide.pdf" and "ENISA NIS2 Technical implementation guidance v1 June 25.pdf". These documents provide the source material for the documentation in this toolkit.
+*   `reference/`: This directory contains official reference documents, such as `ncsc_nis2_quick_reference_guide.pdf` and `enisa_nis2_technical_implementation_guidance_v1_june_25.pdf`. These documents provide the source material for the documentation in this toolkit.
 
 ## Usage
 

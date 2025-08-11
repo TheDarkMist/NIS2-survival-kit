@@ -2,7 +2,7 @@
 # Fill the minimal fields: org.*, roles.*, bcdr.rto_hours, bcdr.rpo_hours, contacts.security_email
 
 meta:
-  profile_version: "1.0"
+  profile_version: "1.1"
   last_updated: "YYYY-MM-DD"     # e.g., 2025-08-11
 
 org:
@@ -25,6 +25,77 @@ assets:
   repositories: ["GitHub", "Google Drive"]
   systems: ["cPanel hosting", "WordPress", "Email"]
   critical_data: ["Client websites", "Databases", "Backups"]
+
+  # Optional structured asset inventory (aligns with CSV fields; keep simple for microbusinesses)
+  inventory:
+    # If a CSV is the primary source, reference it here (optional)
+    source_file: ""  # Optional reference to CSV path (e.g., 99_evidence/inventario_asset.csv). Use underscores; one dot only for extension.
+
+    # CIA scale mapping to keep numeric ratings human-readable
+    cia_scale:
+      "1": "low"
+      "2": "moderate"
+      "3": "high"
+      "4": "critical"
+
+    # Controlled vocabularies (suggested)
+    enums:
+      type: ["hardware", "software", "service", "vps"]
+      access_scope: ["internal", "external"]
+      importance: ["high", "medium", "low"]
+      replaceability: ["easy", "difficult", "non_substitutable"]
+      status: ["active", "planned", "retired"]
+
+    # Keep this list short (top risks/critical assets). Use the CSV for the full inventory.
+    records: []
+
+    # Example record (commented):
+    # - id: "A-001"
+    #   name: "Office Router - FRITZ!Box 4040"
+    #   type: "hardware"                   # one of enums.type
+    #   description: "Primary office internet gateway"
+    #   endpoint: "https://example.myfritz.net:46399/"  # IP or URL
+    #   access:
+    #     scope: "internal"                 # one of enums.access_scope
+    #     external_access:
+    #       enabled: true
+    #       who: ["Owner/IT admin"]
+    #   provider:
+    #     name: "AVM Computersysteme Vertriebs GmbH"
+    #     role: "Router / network access"
+    #     sla: null                          # text or null
+    #   owner: "Owner/CEO"
+    #   importance: "high"                  # one of enums.importance
+    #   replaceability: "easy"              # one of enums.replaceability
+    #   commissioning_date: "2019-04-01"    # YYYY-MM-DD
+    #   platform:
+    #     os: "FRITZ!OS"
+    #     version: "8.00"
+    #   maintenance_contract:
+    #     enabled: false
+    #     details: null
+    #   backup:
+    #     enabled: true
+    #     frequency: "on-change"            # e.g., daily | weekly | on-change
+    #     destination: "Admin PC config backup"
+    #   logging_monitoring:
+    #     enabled: true
+    #     details: "Basic device logs"
+    #   data_processed:
+    #     - "Connected device IP addresses"
+    #   classification:                      # CIA: 1–4 numeric as per cia_scale
+    #     confidentiality: 4
+    #     integrity: 1
+    #     availability: 2
+    #   compliance: ["NIS2"]                # e.g., ["GDPR", "NIS2"]
+    #   status: "active"                    # one of enums.status
+    #   notes: "Failover via mobile hotspot if down"
+
+    # How to use with AI (comment):
+    # - Keep the full inventory in a CSV under /99_evidence/ and set source_file accordingly (e.g., 99_evidence/inventario_asset.csv).
+    # - Prefer file names with underscores and a single dot only for the extension.
+    # - When needed, provide the CSV content to the AI (or allow file read) and ask to populate only critical items here.
+    # - Do not change enums or other sections; update only inventory.records.
 
 vendors:
   critical:
