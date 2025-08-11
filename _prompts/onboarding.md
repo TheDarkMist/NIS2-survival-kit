@@ -17,16 +17,17 @@ The purpose of this repository is to provide a documentation framework to help m
 Our interaction will be based on these key files and folders:
 *   `/00_context/company_profile.yaml`: **The single source of truth for the company profile**. You must **always** read this to personalize the documents.
 *   `/00_context/index.md`: **The master index for all documents**. Its integrity is critical.
-*   `/docs/`: Contains the 13 folders, one for each ENISA security measure.
-*   `/docs/_prompts/en/Create.md`: This is our "creation engine." It contains the basic algorithm for generating a file.
-*   `/docs/{nn}_.../prompt_create_*.md`: These are the specific "recipes." They provide the context and parameters to the `Create.md` engine.
+*   `/_prompts/`: **This is your "toolbox"**. It contains all the prompts we will use.
+*   `/_prompts/core/Create.md`: This is our "creation engine." It contains the basic algorithm for generating a file.
+*   `/_prompts/recipes/`: This folder contains all the specific "recipes" you will use to create documents.
+*   `/docs/`: This folder contains **only** the final documentation, organized by ENISA measure.
 
 ### 4. The Main Workflow (How We Will Interact)
 
 This is our standard way of working:
-1.  I will ask you to perform a task using one of the specific prompt files (the "recipes"), for example: `"Use @docs/01.../prompt_create_policy.md to create the policy"`.
-2.  **YOU** will read that file to understand what to create.
-3.  **YOU** will see that it references the `@docs/_prompts/en/Create.md` engine and will read that as well to understand *how* to create it.
+1.  I will ask you to perform a task by pointing you to a file in `_prompts/recipes/`, for example: `"Use @_prompts/recipes/01_security_policy.md to create the policy"`.
+2.  **YOU** will read that "recipe" file to understand what to create.
+3.  **YOU** will see that it references the `@_prompts/core/Create.md` engine, and you will read that as well to understand *how* to create it.
 4.  **YOU** will read `@00_context/company_profile.yaml` to get the specific company details to inject into the document.
 5.  Finally, you will generate the requested file.
 
@@ -34,6 +35,23 @@ This is our standard way of working:
 
 *   **Never change the folder structure or the names of core files.**
 *   Always use the naming and formatting conventions defined in the prompts.
-*   After creating or updating a document, always remind me that the next step is to update the master index `/00_context/index.md`.
+*   After creating or updating a document, always remind me that the next step is to update the master index (`/00_context/index.md`) using the prompt at `_prompts/update_index.md`.
+
+### 6. Mode (Template vs Real)
+
+Before any task, read `@00_context/config.yaml` and set your mode accordingly.
+
+- If `mode = "template"`:
+  - Use placeholder data and generic examples as needed.
+  - You may refactor prompts and structure to improve the template.
+  - Be proactive in cleaning scaffolding and unused files.
+
+- If `mode = "real"`:
+  - Do not invent data. Always use `@00_context/company_profile.yaml` as the source of truth.
+  - Ask me to fill any missing fields before proceeding.
+  - Be conservative with deletions or destructive edits; request confirmation first.
+  - Keep documents production-ready; no placeholders.
+
+Override rule: if I explicitly say `MODE=template` or `MODE=real` in the chat, that overrides the file setting for the current session.
 
 Please confirm you have understood this briefing. From now on, every request I make should be interpreted within this context.

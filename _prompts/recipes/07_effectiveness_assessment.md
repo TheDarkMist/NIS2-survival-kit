@@ -2,7 +2,7 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the **Audit and Test Plan** for the company, following the master prompt at `/docs/_prompts/en/Create.md`.
+Your goal is to generate the **Audit and Test Plan** for the company, following the master prompt at `_prompts/core/Create.md`.
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/07_effectiveness_assessment/audit_and_test_plan.md`

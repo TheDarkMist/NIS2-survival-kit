@@ -2,7 +2,7 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the **Business Continuity Plan** for the company, following the master prompt at `/docs/_prompts/en/Create.md`.
+Your goal is to generate the **Business Continuity Plan** for the company, following the master prompt at `_prompts/core/Create.md`.
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/04_business_continuity_and_crisis/business_continuity_plan.md`

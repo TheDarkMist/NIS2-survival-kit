@@ -2,7 +2,7 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate a cohesive set of documents for Cyber Hygiene and Training, following the master prompt at `/docs/_prompts/en/Create.md` for each file.
+Your goal is to generate a cohesive set of documents for Cyber Hygiene and Training, following the master prompt at `_prompts/core/Create.md` for each file.
 
 ---
 

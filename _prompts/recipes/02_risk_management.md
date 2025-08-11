@@ -2,7 +2,7 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the **Risk Management Policy** for the company, following the master prompt at `/docs/_prompts/en/Create.md`.
+Your goal is to generate the **Risk Management Policy** for the company, following the master prompt at `_prompts/core/Create.md`.
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/02_risk_management/risk_management_policy.md`

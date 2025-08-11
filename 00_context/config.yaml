@@ -1,0 +1,21 @@
+mode: template  # allowed values: template | real
+
+ai:
+  language: it
+  docs_language: en
+
+safeguards:
+  confirm_before_delete: true
+  confirm_before_overwrite: true
+
+behavior:
+  template:
+    allow_placeholder_data: true
+    prefer_generic_examples: true
+    allow_prompt_refactors: true
+  real:
+    allow_placeholder_data: false
+    require_company_profile_context: true
+    ask_to_fill_missing_fields: true
+    conservative_deletes: true
+

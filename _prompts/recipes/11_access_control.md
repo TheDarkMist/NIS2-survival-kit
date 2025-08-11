@@ -2,7 +2,7 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the **Access Control Policy** for the company, following the master prompt at `/docs/_prompts/en/Create.md`.
+Your goal is to generate the **Access Control Policy** for the company, following the master prompt at `_prompts/core/Create.md`.
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/11_access_control/access_control_policy.md`
