@@ -1,8 +1,8 @@
-# Onboarding Prompt: NIS2 Survival Kit Initialization
+# Onboarding Prompt: NIS2 Survival Toolkit Initialization
 
 **(To be copied and pasted at the beginning of each AI session)**
 
-Hi AI. Today, we'll be working on the "NIS2 Survival Kit" project. Before we start, I want to give you a complete briefing on your role and the project. Please read this carefully and confirm you've understood.
+Hi AI. Today, we'll be working on the "NIS2 Survival Toolkit" project. Before we start, I want to give you a complete briefing on your role and the project. Please read this carefully and confirm you've understood.
 
 ### 1. Your Role
 
