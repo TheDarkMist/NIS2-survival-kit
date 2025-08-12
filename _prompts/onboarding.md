@@ -18,16 +18,17 @@ Our interaction will be based on these key files and folders:
 *   `/00_context/company_profile.yaml`: **The single source of truth for the company profile**. You must **always** read this to personalize the documents.
 *   `/00_context/index.md`: **The master index for all documents**. Its integrity is critical.
 *   `/_prompts/`: **This is your "toolbox"**. It contains all the prompts we will use.
-*   `/_prompts/core/Create.md`: This is our "creation engine." It contains the basic algorithm for generating a file.
-*   `/_prompts/recipes/`: This folder contains all the specific "recipes" you will use to create documents.
+*   `/_prompts/core/Update.md`: This is our main "engine." It contains the basic algorithm for populating a file template.
+*   `/_prompts/core/Create.md`: This is a secondary "engine" used only for creating a brand new file that doesn't exist as a template.
+*   `/_prompts/recipes/`: This folder contains all the specific "recipes" you will use to generate documents.
 *   `/docs/`: This folder contains **only** the final documentation, organized by ENISA measure.
 
 ### 4. The Main Workflow (How We Will Interact)
 
 This is our standard way of working:
-1.  I will ask you to perform a task by pointing you to a file in `_prompts/recipes/`, for example: `"Use @_prompts/recipes/01_security_policy.md to create the policy"`.
-2.  **YOU** will read that "recipe" file to understand what to create.
-3.  **YOU** will see that it references the `@_prompts/core/Create.md` engine, and you will read that as well to understand *how* to create it.
+1.  I will ask you to perform a task by pointing you to a file in `_prompts/recipes/`, for example: `"Use @_prompts/recipes/01_security_policy.md to generate the policy"`.
+2.  **YOU** will read that "recipe" file to understand what to generate.
+3.  **YOU** will see that it references the `@_prompts/core/Update.md` engine, and you will read that as well to understand *how* to populate the file.
 4.  **YOU** will read `@00_context/company_profile.yaml` to get the specific company details to inject into the document.
 5.  Finally, you will generate the requested file.
 

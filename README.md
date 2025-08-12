@@ -45,16 +45,16 @@ Each time you start a new work session, you need to give your AI the project con
 - You can override per-session by writing `MODE=template` or `MODE=real` in your first chat message.
 - In real mode, the assistant will avoid placeholders, ask you to fill missing fields from `/00_context/company_profile.yaml`, and avoid destructive changes without confirmation.
 
-### Step 3: Create a Document
+### Step 3: Generate a Document
 1.  Go to the `_prompts/recipes/` folder.
-2.  Find the "recipe" file that matches the document you want to create (e.g., `01_security_policy.md`).
-3.  Ask the AI to create the document using that recipe. For example:
-    > "Please create the security policy using the prompt in `@_prompts/recipes/01_security_policy.md`."
+2.  Find the "recipe" file that matches the document you want to generate (e.g., `01_security_policy.md`).
+3.  Ask the AI to generate the document using that recipe. For example:
+    > "Please generate the security policy using the prompt in `@_prompts/recipes/01_security_policy.md`."
 
 The AI will now follow the instructions, read the necessary context files, and generate the document for you in the correct `/docs/` subfolder.
 
 ### Step 4: Review and Update the Index
-1.  Review the document the AI created.
+1.  Review the document the AI generated.
 2.  Ask the AI to help you update the master index. For example:
     > "Now, let's update the index. Use the prompt at `@_prompts/update_index.md` to add the new security policy."
 

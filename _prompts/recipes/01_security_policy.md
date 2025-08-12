@@ -2,18 +2,20 @@
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the main **Security Policy** for the company, following the master prompt at `_prompts/core/Create.md`.
+Your goal is to populate the main **Security Policy** for the company, following the master prompt at `_prompts/core/Update.md`.
 
 **Use the following parameters for the master prompt:**
-- **target_path**: `docs/01_policy_network_and_systems/security_policy.md`
+- **target_path**: `docs/01_policy_network_and_systems/security_policy.md` # This is the file we are updating
 - **title**: "Security Policy for Network and Information Systems"
 - **doc_id**: "NIS2-01-POL-security-policy"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "01 / Policy on security of network and information systems"
 - **type**: "POL"
-- **overwrite**: `false` (unless the user specifies otherwise)
 
-**Content guidelines (in addition to the master prompt):**
+**Edits to perform:**
+- **change_type**: "major" # This is the first content generation
+- **update_dates**: true
+- **sections**:
 1.  **Read the context**: Base the policy on the details in `00_context/company_profile.yaml`.
 2.  **Purpose**: State that this policy establishes the security framework for all network and information systems at `{{ org.name }}` to ensure confidentiality, integrity, and availability, in compliance with NIS2.
 3.  **Scope**: The policy applies to all employees, contractors, and the `{{ roles.it_admin }}`. It covers all company-managed assets, including `{{ assets.systems }}` and `{{ assets.critical_data }}`.
