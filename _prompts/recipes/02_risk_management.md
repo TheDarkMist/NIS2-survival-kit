@@ -1,8 +1,12 @@
-# Prompt: Create the Risk Management Policy
+# Prompt: Create the Risk Management documents
 
 You will act as a NIS2 documentation assistant.
 
-Your goal is to generate the **Risk Management Policy** for the company, following the master prompt at `_prompts/core/Create.md`.
+Your goal is to generate the **Risk Management Policy** and the **Risk Register** for the company, following the master prompt at `_prompts/core/Create.md` for each.
+
+---
+
+### File 1: Risk Management Policy
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/02_risk_management/risk_management_policy.md`
@@ -10,21 +14,36 @@ Your goal is to generate the **Risk Management Policy** for the company, followi
 - **doc_id**: "NIS2-02-POL-risk-management"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "02 / Risk management"
-- **type**: "policy"
-- **overwrite**: `false` (unless the user specifies otherwise)
+- **type**: "POL"
+- **overwrite**: `false`
 
-**Content guidelines (in addition to the master prompt):**
-1.  **Read the context**: Base the policy on `00_context/company_profile.yaml`, paying close attention to the `risk` section.
-2.  **Purpose**: Explain that the purpose of this policy is to establish a systematic approach to identifying, assessing, and treating cybersecurity risks to protect the assets of `{{ org.name }}`.
-3.  **Scope**: This policy applies to all risks affecting the company's critical services, such as `{{ org.critical_services }}`.
-4.  **Roles & Responsibilities**:
-    -   **`{{ roles.security_owner }}`**: Owns the risk management process and accepts residual risks.
-    -   All team members are responsible for identifying and reporting risks.
-5.  **Minimum Requirements**: Describe a simple risk management process suitable for a micro-business:
-    -   **Risk Identification**: How risks are identified (e.g., brainstorming, incident reviews).
-    -   **Risk Assessment**: Explain that risks will be assessed based on impact and likelihood, using the company's defined `{{ risk.rating_scale }}`.
-    -   **Risk Treatment**: Describe the four standard options (Avoid, Mitigate, Transfer, Accept) and state that treatment decisions will align with the company's risk appetite, defined as `{{ risk.appetite }}`.
-    -   **Risk Monitoring**: State that the `risk_register.csv` will be reviewed periodically.
-6.  **Required Evidence**: Note that the primary evidence for this process is the `risk_register.csv` file located in the same directory.
+**Content guidelines:**
+1.  **Purpose**: Explain that the policy defines how `{{ org.name }}` identifies, assesses, and treats cybersecurity risks.
+2.  **Scope**: Applies to all systems, assets, and data, especially `{{ assets.systems }}` and `{{ assets.critical_data }}`.
+3.  **Roles & Responsibilities**:
+    -   `{{ roles.security_owner }}`: Owns the risk management process.
+    -   `{{ roles.it_admin }}`: Implements risk treatment measures.
+4.  **Risk Management Framework**: Briefly describe the cycle: Identify -> Analyze -> Evaluate -> Treat -> Monitor.
+5.  **Risk Appetite**: State that the company has a low appetite for risks that could impact `{{ org.services }}` or compromise `{{ assets.critical_data }}`.
+6.  **Required Evidence**: Mention the `risk_register.csv` as the primary evidence.
 
-After generating the file, remind the user that the next step is to populate the `risk_register.csv` and then update the master index.
+---
+
+### File 2: Risk Register
+
+**Use the following parameters for the master prompt:**
+- **target_path**: `docs/02_risk_management/risk_register.csv`
+- **title**: "Risk Register"
+- **doc_id**: "NIS2-02-REG-risk-register"
+- **owner**: "{{ roles.security_owner }}"
+- **enisa_mapping**: "02 / Risk management"
+- **type**: "REG"
+- **overwrite**: `false`
+
+**Content guidelines:**
+- The file is a CSV.
+- Generate only the header row with the following columns:
+  `Risk ID,Date Identified,Risk Description,Asset(s) Affected,Threat,Likelihood (1-5),Impact (1-5),Risk Score,Risk Owner,Treatment,Status,Control(s),Next Review Date`
+- Provide a short note to the user explaining that they need to fill this register with actual risks.
+
+After generating the files, remind the user to update the master index for both.

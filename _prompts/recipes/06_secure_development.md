@@ -16,7 +16,8 @@ Your goal is to generate a cohesive set of documents for Secure Acquisition, Dev
 - **doc_id**: "NIS2-06-POL-secure-development"
 - **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "06 / Security in acquisition, development and maintenance"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - **Purpose**: To ensure that all software and systems, particularly the WordPress client sites, are developed, acquired, and maintained securely.
@@ -40,7 +41,8 @@ Your goal is to generate a cohesive set of documents for Secure Acquisition, Dev
 - **doc_id**: "NIS2-06-CHK-code-review"
 - **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "06 / Security in acquisition, development and maintenance"
-- **type**: "checklist"
+- **type**: "CHK"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - Create a Markdown checklist (`- [ ] Item`).

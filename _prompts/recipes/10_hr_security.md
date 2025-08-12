@@ -8,9 +8,10 @@ Your goal is to generate the **Human Resources Security Policy** for the company
 - **target_path**: `docs/10_hr_security/hr_security_policy.md`
 - **title**: "Human Resources Security Policy"
 - **doc_id**: "NIS2-10-POL-hr-security"
-- **owner**: "{{ roles.security_owner }}"
+- **owner**: "{{ roles.hr_manager }}"
 - **enisa_mapping**: "10 / Human resources security, access control and asset management"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The policy should be practical for a company of `{{ org.headcount }}` employees, as per `00_context/company_profile.yaml`.

@@ -6,17 +6,16 @@ Your goal is to generate a cohesive set of documents for Incident Handling, foll
 
 ---
 
-### 1. Incident Response Policy
-
-**Instruction**: Generate the main policy for handling incidents.
+### File 1: Incident Response Policy
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/03_incident_handling/incident_response_policy.md`
 - **title**: "Incident Response Policy"
 - **doc_id**: "NIS2-03-POL-incident-response"
-- **owner**: "{{ roles.security_owner }}"
+- **owner**: "{{ roles.incident_manager }}"
 - **enisa_mapping**: "03 / Incident handling"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - **Purpose**: To define a structured approach for managing security incidents, minimizing impact on `{{ org.name }}`, and ensuring timely reporting.
@@ -29,17 +28,16 @@ Your goal is to generate a cohesive set of documents for Incident Handling, foll
 
 ---
 
-### 2. Incident Playbook
-
-**Instruction**: Generate a practical playbook for common incidents.
+### File 2: Incident Response Playbook
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/03_incident_handling/incident_playbook.md`
-- **title**: "Incident Playbook"
+- **title**: "Incident Response Playbook"
 - **doc_id**: "NIS2-03-PBK-incident-playbook"
 - **owner**: "{{ roles.incident_manager }}"
 - **enisa_mapping**: "03 / Incident handling"
-- **type**: "playbook"
+- **type**: "PBK"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - Create playbooks for 2-3 common scenarios for a WordPress business, for example:
@@ -50,17 +48,16 @@ Your goal is to generate a cohesive set of documents for Incident Handling, foll
 
 ---
 
-### 3. Incident Report Form
-
-**Instruction**: Generate a template for reporting incidents.
+### File 3: Incident Report Form
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/03_incident_handling/incident_report_form.md`
 - **title**: "Incident Report Form"
-- **doc_id**: "NIS2-03-TMP-incident-report"
+- **doc_id**: "NIS2-03-FORM-incident-report"
 - **owner**: "{{ roles.incident_manager }}"
 - **enisa_mapping**: "03 / Incident handling"
-- **type**: "form"
+- **type**: "FORM"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - Create a Markdown table that serves as a form.

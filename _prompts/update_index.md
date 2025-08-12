@@ -3,8 +3,8 @@
 This prompt is meant for an AI assistant (or a careful human) to **append or update rows** in the **Master index** table inside `/00_context/index.md`, without breaking formatting, IDs, or conventions. Keep it minimal, deterministic, and auditable.
 
 > Usage note (modular flow recommended)
-> - After creating, reviewing, or updating a single document using `docs/_prompts/en/Create.md`, `Review.md`, or `Update.md`, use this prompt to add/update the corresponding row in `/00_context/index.md`.
-> - If you generate multiple files with `docs/_prompts/en/Bootstrap.md`, run this prompt afterwards to register each file in the index.
+> - After creating, reviewing, or updating a single document using `_prompts/core/Create.md`, `Review.md`, or `Update.md`, use this prompt to add/update the corresponding row in `/00_context/index.md`.
+> - If you generate multiple files, run this prompt afterwards to register each file in the index.
 
 ---
 

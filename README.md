@@ -67,7 +67,3 @@ Repeat steps 3 and 4 to incrementally build your full set of NIS2 documentation.
 - **Contextual Recipes** – Each recipe in `/_prompts/recipes/` is tailored for a specific security area.
 - **Modularity** – The underlying "engine" prompts in `/_prompts/core/` are reusable and easy to maintain.
 - **Source-based accuracy** – All advice and generated text should be consistent with `/reference/` materials.
-
-## License
-
-[MIT License](LICENSE) – You are free to use, modify, and share this project.

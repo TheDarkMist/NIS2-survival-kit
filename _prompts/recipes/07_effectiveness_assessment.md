@@ -6,11 +6,12 @@ Your goal is to generate the **Audit and Test Plan** for the company, following 
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/07_effectiveness_assessment/audit_and_test_plan.md`
-- **title**: "Audit and Test Plan"
-- **doc_id**: "NIS2-07-PLAN-audit-and-test"
+- **title**: "Effectiveness Audit and Test Plan"
+- **doc_id**: "NIS2-07-PLAN-audit-test"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "07 / Assessment of the effectiveness of cybersecurity risk-management measures"
 - **type**: "PLAN"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The plan should be realistic for `{{ org.name }}`, as described in `00_context/company_profile.yaml`.

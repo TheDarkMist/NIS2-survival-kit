@@ -11,6 +11,7 @@ Your goal is to generate the **Business Continuity Plan** for the company, follo
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "04 / Business continuity and crisis management"
 - **type**: "PLAN"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The plan MUST be based on the `bcdr` (Business Continuity and Disaster Recovery) section of `00_context/company_profile.yaml`.

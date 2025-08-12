@@ -10,7 +10,8 @@ Your goal is to generate the **Cryptography Policy** for the company, following 
 - **doc_id**: "NIS2-09-POL-cryptography"
 - **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "09 / Cryptography and encryption"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The policy should be practical for `{{ org.name }}`, as described in `00_context/company_profile.yaml`.

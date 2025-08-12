@@ -6,17 +6,16 @@ Your goal is to generate a cohesive set of documents for Cyber Hygiene and Train
 
 ---
 
-### 1. Hygiene Guidelines
-
-**Instruction**: Generate a document with basic cyber hygiene guidelines for all employees.
+### File 1: Cyber Hygiene Guidelines
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/08_cyber_hygiene_and_training/hygiene_guidelines.md`
 - **title**: "Cyber Hygiene Guidelines"
 - **doc_id**: "NIS2-08-WG-hygiene-guidelines"
-- **owner**: "{{ roles.security_owner }}"
+- **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "08 / Basic cyber hygiene and cybersecurity training"
-- **type**: "WG" (Work Guideline)
+- **type**: "WG"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - **Purpose**: To provide all personnel of `{{ org.name }}` with clear, actionable rules for everyday secure behavior.
@@ -30,17 +29,16 @@ Your goal is to generate a cohesive set of documents for Cyber Hygiene and Train
 
 ---
 
-### 2. Security Training Plan
-
-**Instruction**: Generate a simple plan for security awareness training.
+### File 2: Security Training Plan
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/08_cyber_hygiene_and_training/security_training_plan.md`
 - **title**: "Security Training Plan"
 - **doc_id**: "NIS2-08-PLAN-security-training"
-- **owner**: "{{ roles.security_owner }}"
+- **owner**: "{{ roles.hr_manager }}"
 - **enisa_mapping**: "08 / Basic cyber hygiene and cybersecurity training"
 - **type**: "PLAN"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - **Purpose**: To outline the security training program for `{{ org.name }}`.

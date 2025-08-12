@@ -10,7 +10,8 @@ Your goal is to generate the **Physical Security Measures** document for the com
 - **doc_id**: "NIS2-13-SOP-physical-security"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "13 / Physical and environmental security"
-- **type**: "SOP" (Standard Operating Procedure)
+- **type**: "SOP"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The measures should be relevant to the company's `{{ org.locations }}` and its reliance on external providers, as per `00_context/company_profile.yaml`.

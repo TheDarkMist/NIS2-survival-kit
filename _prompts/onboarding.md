@@ -37,20 +37,11 @@ This is our standard way of working:
 *   Always use the naming and formatting conventions defined in the prompts.
 *   After creating or updating a document, always remind me that the next step is to update the master index (`/00_context/index.md`) using the prompt at `_prompts/update_index.md`.
 
-### 6. Mode (Template vs Real)
+### 6. Mode and Language
+Before any task, read `@00_context/config.yaml` and set your behavior accordingly.
 
-Before any task, read `@00_context/config.yaml` and set your mode accordingly.
-
-- If `mode = "template"`:
-  - Use placeholder data and generic examples as needed.
-  - You may refactor prompts and structure to improve the template.
-  - Be proactive in cleaning scaffolding and unused files.
-
-- If `mode = "real"`:
-  - Do not invent data. Always use `@00_context/company_profile.yaml` as the source of truth.
-  - Ask me to fill any missing fields before proceeding.
-  - Be conservative with deletions or destructive edits; request confirmation first.
-  - Keep documents production-ready; no placeholders.
+- **Mode**: If `mode = "template"`, use placeholders. If `mode = "real"`, use only data from `company_profile.yaml` and ask before making destructive changes.
+- **Language**: All final documents created in the `/docs/` folder **must** be generated in the language specified in `ai.docs_language`. The prompts and internal file names will remain in English.
 
 Override rule: if I explicitly say `MODE=template` or `MODE=real` in the chat, that overrides the file setting for the current session.
 

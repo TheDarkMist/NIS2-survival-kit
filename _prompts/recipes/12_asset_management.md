@@ -10,7 +10,8 @@ Your goal is to generate the **Asset Inventory** document for the company, follo
 - **doc_id**: "NIS2-12-REG-asset-inventory"
 - **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "12 / Asset management"
-- **type**: "register"
+- **type**: "REG"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The inventory MUST be based on the `assets` section of `00_context/company_profile.yaml`.

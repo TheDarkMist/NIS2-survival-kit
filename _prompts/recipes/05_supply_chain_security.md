@@ -6,17 +6,16 @@ Your goal is to generate a cohesive set of documents for Supply Chain Security, 
 
 ---
 
-### 1. Supplier Assessment Policy
-
-**Instruction**: Generate the policy for assessing and managing suppliers.
+### File 1: Supplier Assessment Policy
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/05_supply_chain_security/supplier_assessment_policy.md`
-- **title**: "Supplier Assessment Policy"
+- **title**: "Supplier Security Assessment Policy"
 - **doc_id**: "NIS2-05-POL-supplier-assessment"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "05 / Supply chain security"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - **Purpose**: To establish a process for assessing the security posture of suppliers to minimize supply chain risks for `{{ org.name }}`.
@@ -30,9 +29,7 @@ Your goal is to generate a cohesive set of documents for Supply Chain Security, 
 
 ---
 
-### 2. Supplier Register
-
-**Instruction**: Generate the register to track all key suppliers.
+### File 2: Supplier Register
 
 **Use the following parameters for the master prompt:**
 - **target_path**: `docs/05_supply_chain_security/supplier_register.md`
@@ -40,7 +37,8 @@ Your goal is to generate a cohesive set of documents for Supply Chain Security, 
 - **doc_id**: "NIS2-05-REG-supplier-register"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "05 / Supply chain security"
-- **type**: "register"
+- **type**: "REG"
+- **overwrite**: `false`
 
 **Content guidelines:**
 - Create a Markdown table to serve as the register.

@@ -10,7 +10,7 @@ Your goal is to generate the main **Security Policy** for the company, following
 - **doc_id**: "NIS2-01-POL-security-policy"
 - **owner**: "{{ roles.security_owner }}"
 - **enisa_mapping**: "01 / Policy on security of network and information systems"
-- **type**: "policy"
+- **type**: "POL"
 - **overwrite**: `false` (unless the user specifies otherwise)
 
 **Content guidelines (in addition to the master prompt):**
@@ -27,6 +27,6 @@ Your goal is to generate the main **Security Policy** for the company, following
     -   Use of strong authentication.
     -   Data encryption (in transit and at rest).
     -   Basic endpoint protection (e.g., antivirus on company devices).
-6.  **Required Evidence**: Mention that evidence of compliance will be stored in `/99_evidence/` and may include firewall configurations, patch management logs, and access control reviews.
+6.  **Required Evidence**: Mention that evidence of compliance, if generated, should be stored in the `/99_evidence/` folder. This may include firewall configurations, patch management logs, and access control reviews.
 
 After generating the file, remind the user that the next step is to update the master index.

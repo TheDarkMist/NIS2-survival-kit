@@ -10,7 +10,8 @@ Your goal is to generate the **Access Control Policy** for the company, followin
 - **doc_id**: "NIS2-11-POL-access-control"
 - **owner**: "{{ roles.it_admin }}"
 - **enisa_mapping**: "11 / Access control"
-- **type**: "policy"
+- **type**: "POL"
+- **overwrite**: `false`
 
 **Content guidelines (in addition to the master prompt):**
 1.  **Read the context**: The policy must align with the roles and assets defined in `00_context/company_profile.yaml`.
